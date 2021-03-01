@@ -450,6 +450,7 @@
 <h1>Update 2<a class="headerlink" href="#update-2" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="parsing-conversation-and-label-data">
 <h2>Parsing Conversation and Label Data:<a class="headerlink" href="#parsing-conversation-and-label-data" title="Permalink to this headline">¶</a></h2>
+<p>We cleaned up the data to avoid common words that don’t hold a lot of valuable information and other discrepencies that would skew our model results. The effects of such parsing can be viewed in the word clouds below, the former of which being less informative for labels that we are looking to classify and the latter being more useful.</p>
 </div>
 <div class="section" id="word-cloud">
 <h2>Word Cloud:<a class="headerlink" href="#word-cloud" title="Permalink to this headline">¶</a></h2>
@@ -567,6 +568,7 @@ Our data is in a nested json format which has made it difficult to extract and w
 </div>
 <div class="section" id="react-frontend-backend-basics">
 <h2>React Frontend/Backend Basics:<a class="headerlink" href="#react-frontend-backend-basics" title="Permalink to this headline">¶</a></h2>
+<p>We had a client/server test application in Python to demonstrate the classifying power of our models and also feed more conversation data into the models in real time. For reproducability and versatility, we decided to move this and our other model components into a React app that uses MongoDB and Docker to connect all the components of our app.</p>
 </div>
 </div>
 
