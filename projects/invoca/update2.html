@@ -482,6 +482,8 @@
 <div class="section" id="parsing-conversation-and-label-data">
 <h2>Parsing Conversation and Label Data:<a class="headerlink" href="#parsing-conversation-and-label-data" title="Permalink to this headline">¶</a></h2>
 <p>We cleaned up the data to avoid common words that don’t hold a lot of valuable information and other discrepencies that would skew our model results. The effects of such parsing can be viewed in the word clouds below, the former of which being less informative for labels that we are looking to classify and the latter being more useful.</p>
+<p>Furthermore, after cleaning up the data, we were able to develop a better understanding of how the data is structured and how to organize a chatbot that uses our ML models to make classifications and maybe eventually, conversational responses. Notes for our chatbot structure can be found here:</p>
+<p><a class="reference external" href="https://docs.google.com/document/d/1AIHlIQ1Y-_yLgH012E7MqabeAh2kXH1yXyLpcQUfAho">Chatbot Structure</a></p>
 </div>
 <div class="section" id="word-cloud">
 <h2>Word Cloud:<a class="headerlink" href="#word-cloud" title="Permalink to this headline">¶</a></h2>
@@ -524,7 +526,12 @@
 </div>
 <div class="section" id="react-frontend-backend-basics">
 <h2>React Frontend/Backend Basics:<a class="headerlink" href="#react-frontend-backend-basics" title="Permalink to this headline">¶</a></h2>
-<p>We had a client/server test application in Python to demonstrate the classifying power of our models and also feed more conversation data into the models in real time. For reproducability and versatility, we decided to move this and our other model components into a React app that uses MongoDB and Docker to connect all the components of our app.</p>
+<p>We had a client/server test application in Python to demonstrate the classifying power of our models and also feed more conversation data into the models in real time.</p>
+<p>One of the most important aspects of our project is how we will visualize and display the results of the machine learning models we created. After much research we decided to set up a React app with a Flask and MongoDB backend using Docker. This implementation prioritizes reproducability and versatility.</p>
+<p>React is a front-end javascript library for building user interfaces.<br />
+Flask is a micro web framework written in python that will be used to connect to our database using MongoEngine and host our machine learning models.
+MongoDB is a document-oriented database program that uses JSON-like documents with optional schemas.</p>
+<p>The frontend network will use react for the user interface and get the predictions for machine learning models from the RESTful Flask API. The backend network will use MongoDB to store the chat logs which will feed into the machine learning models in Flask. The reason for using docker is it creates a self-contained development environment that adapts to the users system specifications. The isolation and the portability allows our team members to quickly start working on our app and share the containers using docker hub.</p>
 </div>
 </div>
 
